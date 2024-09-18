@@ -5,7 +5,6 @@ namespace WinFormsApp1
     public partial class Form1 : Form
     {
         #region Fields
-        private BindingSource bindingSource = new();
         #endregion
 
         #region Ctor
