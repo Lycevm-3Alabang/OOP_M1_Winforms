@@ -35,6 +35,7 @@
             label2 = new Label();
             textBox1 = new TextBox();
             dataGridView1 = new DataGridView();
+            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -58,6 +59,7 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(161, 23);
             comboBox1.TabIndex = 2;
+            comboBox1.DropDownClosed += comboBox1_DropDownClosed;
             // 
             // label1
             // 
@@ -86,12 +88,13 @@
             label2.TabIndex = 5;
             label2.Text = "Search";
             // 
-            // txtFirstName
+            // textBox1
             // 
             textBox1.Location = new Point(96, 43);
-            textBox1.Name = "txtFirstName";
-            textBox1.Size = new Size(405, 23);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(295, 23);
             textBox1.TabIndex = 6;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // dataGridView1
             // 
@@ -106,13 +109,23 @@
             dataGridView1.Size = new Size(478, 601);
             dataGridView1.TabIndex = 7;
             dataGridView1.CellDoubleClick += DataGridView1_CellDoubleClick;
-          
+            // 
+            // button3
+            // 
+            button3.Location = new Point(397, 44);
+            button3.Name = "button3";
+            button3.Size = new Size(98, 23);
+            button3.TabIndex = 8;
+            button3.Text = "Enter";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(507, 749);
+            Controls.Add(button3);
             Controls.Add(dataGridView1);
             Controls.Add(textBox1);
             Controls.Add(label2);
@@ -139,5 +152,6 @@
         private Label label2;
         private TextBox textBox1;
         private DataGridView dataGridView1;
+        private Button button3;
     }
 }
